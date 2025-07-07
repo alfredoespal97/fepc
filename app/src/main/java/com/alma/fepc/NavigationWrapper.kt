@@ -38,8 +38,10 @@ fun NavigationWrapper(navHostController: NavHostController) {
                     onComplete = {
                         viewModel.completeLesson(lesson)
                         navHostController.popBackStack()
-                    }
+                    },
+                    onNavigateAfterCompletion = { navHostController.popBackStack() }
                 )
+
             }
         }
     }
